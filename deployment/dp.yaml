@@ -19,5 +19,5 @@ spec:
   selector:
     matchLabels:
       type: frontend-2
-  replicas: 2
+  replicas: 3
  
