@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: frontend-qui
+  labels:
+    app: frontendrs
+spec:
+  template: 
+    metadata:
+      name: nginx-pod
+      labels:
+        env: prod
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+  selector:
+    matchLabels:
+      env: prod
+  replicas: 4
+
+    
+
+  
